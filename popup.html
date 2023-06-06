@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Processing Extension</title>
+  <script src="popup.js"></script>
+  <style>
+    #loading {
+      display: none;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Data Processing Extension</h1>
+  <span class="close">&times;</span>
+  <input type="text" id="dataInput" placeholder="Enter Data">
+  <button id="submitBtn">Submit</button>
+  <div id="loading">Loading...</div>
+  <div id="result"></div>
+
+  <script>
+    window.addEventListener('beforeunload', function(event) {
+      // Prevent the popup from closing when the active tab is switched
+      event.preventDefault();
+      event.returnValue = '';
+    });
+  </script>
+</body>
+</html>
