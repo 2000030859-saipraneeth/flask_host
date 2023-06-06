@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     resultDiv.textContent = '';
 
    
-    fetch('http://localhost:8000/process', {
+    fetch('http://localhost:3000/process', {
       method: 'POST',
       body: JSON.stringify({ data }),
       headers: {
